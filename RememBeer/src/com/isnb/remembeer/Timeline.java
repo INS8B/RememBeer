@@ -12,9 +12,9 @@ public class Timeline extends Activity {
 		setContentView(R.layout.activity_timeline);
 	}
 
-	public boolean onCreateOptionsMenu(Menu menu) {
+	public boolean onCreateOptionsMenu(android.view.Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		//getMenuInflater().inflate(R.menu.timeline, menu);
+		getMenuInflater().inflate(R.menu.timeline, menu);
 		return true;
 	}
 

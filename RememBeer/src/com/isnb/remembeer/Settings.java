@@ -1,5 +1,8 @@
 package com.isnb.remembeer;
 
+import android.app.Activity;
+import android.os.Bundle;
+
 
 public class Settings extends Activity {
 
@@ -10,7 +13,7 @@ public class Settings extends Activity {
 	}
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
+	public boolean onCreateOptionsMenu(android.view.Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.settings, menu);
 		return true;
