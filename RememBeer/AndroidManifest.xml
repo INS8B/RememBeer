@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.isnb.remembeer"
     android:versionCode="1"
@@ -12,6 +13,31 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.isnb.remembeer.Menu"
+            android:label="@string/title_activity_menu" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.isnb.remembeer.Settings"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="com.isnb.remembeer.Evening"
+            android:label="@string/title_activity_evening" >
+        </activity>
+        <activity
+            android:name="com.isnb.remembeer.History"
+            android:label="@string/title_activity_history" >
+        </activity>
+        <activity
+            android:name="com.isnb.remembeer.Timeline"
+            android:label="@string/title_activity_timeline" >
+        </activity>
     </application>
 
 </manifest>
