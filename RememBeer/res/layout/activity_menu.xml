@@ -17,8 +17,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="111dp"
         android:background="@drawable/start_button_shape"
-        android:src="@drawable/beer"
-        android:onClick="startDrinking" />
+        android:onClick="startDrinking"
+        android:src="@drawable/beer" />
 
     <TextView
         android:id="@+id/txtStartButton"
@@ -28,7 +28,27 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="-100dp"
         android:onClick="startDrinking"
-        android:text="Prost!"
+        android:text="Start Drinking"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btSettings"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:text="Settings"
+        android:onClick="startSettings" />
+
+    <Button
+        android:id="@+id/btHistory"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:text="Drinking History"
+        android:onClick="startHistory" />
 
 </RelativeLayout>

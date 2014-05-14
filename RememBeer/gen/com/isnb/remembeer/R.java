@@ -36,7 +36,9 @@ public final class R {
         public static final int start_button_shape=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b0002;
+        public static final int action_settings=0x7f0b0004;
+        public static final int btHistory=0x7f0b0003;
+        public static final int btSettings=0x7f0b0002;
         public static final int btStartDrinking=0x7f0b0000;
         public static final int txtStartButton=0x7f0b0001;
     }
