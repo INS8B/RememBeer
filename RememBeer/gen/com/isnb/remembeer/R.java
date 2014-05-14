@@ -36,11 +36,26 @@ public final class R {
         public static final int start_button_shape=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b0004;
-        public static final int btHistory=0x7f0b0003;
-        public static final int btSettings=0x7f0b0002;
-        public static final int btStartDrinking=0x7f0b0000;
-        public static final int txtStartButton=0x7f0b0001;
+        public static final int action_settings=0x7f0b0013;
+        public static final int btHistory=0x7f0b0012;
+        public static final int btSettings=0x7f0b0011;
+        public static final int btStartDrinking=0x7f0b000f;
+        public static final int imgbtn_drinkEight=0x7f0b0008;
+        public static final int imgbtn_drinkFive=0x7f0b0009;
+        public static final int imgbtn_drinkFour=0x7f0b0006;
+        public static final int imgbtn_drinkNine=0x7f0b000e;
+        public static final int imgbtn_drinkOne=0x7f0b0003;
+        public static final int imgbtn_drinkSeven=0x7f0b0007;
+        public static final int imgbtn_drinkSix=0x7f0b000a;
+        public static final int imgbtn_drinkThree=0x7f0b0005;
+        public static final int imgbtn_two=0x7f0b0004;
+        public static final int tableRow1=0x7f0b000b;
+        public static final int tableRow2=0x7f0b000c;
+        public static final int tableRow3=0x7f0b000d;
+        public static final int textView1=0x7f0b0000;
+        public static final int textView2=0x7f0b0001;
+        public static final int textView3=0x7f0b0002;
+        public static final int txtStartButton=0x7f0b0010;
     }
     public static final class layout {
         public static final int activity_evening=0x7f030000;
