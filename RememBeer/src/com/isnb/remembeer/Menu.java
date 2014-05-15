@@ -23,13 +23,13 @@ public class Menu extends Activity {
 	}
 	
 	public void startDrinking (View view) {
-		Toast.makeText(getApplicationContext(), "Hier kˆnnen dann die Getr‰nke ausgew‰hlt werden!", Toast.LENGTH_SHORT).show();
+		Toast.makeText(getApplicationContext(), "Hier k√∂nnen dann die Getr√§nke ausgew√§hlt werden!", Toast.LENGTH_SHORT).show();
 	}
 	
 	public void startSettings (View view) {
-		Intent intent = new Intent(this, SettingsActivity.class);
-	    startActivity(intent);
-		//Toast.makeText(getApplicationContext(), "Hier kˆnnen dann die Getr‰nke ausgew‰hlt werden!", Toast.LENGTH_SHORT).show();
+		//Intent intent = new Intent(this, SettingsActivity.class);
+	    //startActivity(intent);
+		Toast.makeText(getApplicationContext(), "Hier k√∂nnen dann die Getr√§nke ausgew√§hlt werden!", Toast.LENGTH_SHORT).show();
 	}
 	
 	public void startHistory (View view) {

@@ -38,10 +38,6 @@
             android:name="com.isnb.remembeer.Timeline"
             android:label="@string/title_activity_timeline" >
         </activity>
-        <activity
-            android:name="com.isnb.remembeer.SettingsActivity"
-            android:label="@string/title_activity_settings" >
-        </activity>
     </application>
 
 </manifest>
