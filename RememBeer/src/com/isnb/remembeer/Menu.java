@@ -31,7 +31,7 @@ public class Menu extends Activity {
 	public void startSettings (View view) {
 		//Intent intent = new Intent(this, SettingsActivity.class);
 	    //startActivity(intent);
-		Toast.makeText(getApplicationContext(), "Hier können dann die Getränke ausgewählt werden!", Toast.LENGTH_SHORT).show();
+		Toast.makeText(getApplicationContext(), "Hier können dann die Einstellungen ausgewählt werden!", Toast.LENGTH_SHORT).show();
 	}
 	
 	public void startHistory (View view) {
