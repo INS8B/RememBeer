@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#E0E0E0" />
-    <corners android:radius="10dp" />
-    <padding
-        android:right="7px"
-        android:bottom="7px" />
-</shape>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape>
+            <solid android:color="#ACACAC" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <item
+        android:top="7px"
+        android:left="7px">
+        <shape>
+            <corners android:radius="10dp" />
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+</layer-list>
