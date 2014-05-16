@@ -50,7 +50,8 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
-               android:contentDescription="current drink" />
+               android:contentDescription="current drink"
+               android:background="@drawable/custom_drink_buttons"/>
        </TableRow>
    </TableLayout>
    
@@ -60,34 +61,44 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_alignParentBottom="true"
-       android:layout_alignParentRight="true" >
+       android:layout_alignParentRight="true"
+       android:stretchColumns="0,1,2" >
 
        <TableRow
            android:id="@+id/tableRow1"
            android:layout_width="match_parent"
            android:layout_height="0dp"
-           android:layout_weight="1" >
+           android:layout_weight="1">
 
            <ImageButton
                android:id="@+id/imgbtn_drinkOne"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
-               android:contentDescription="drink one" />
+               android:contentDescription="drink one"
+               android:background="@drawable/custom_drink_buttons"
+               android:layout_marginBottom="5px"
+               android:layout_marginRight="5px" />
 
            <ImageButton
                android:id="@+id/imgbtn_two"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
-               android:contentDescription="drink one" />
+               android:contentDescription="drink one"
+               android:background="@drawable/custom_drink_buttons"
+               android:layout_marginBottom="5px"
+               android:layout_marginRight="5px" />
 
            <ImageButton
                android:id="@+id/imgbtn_drinkThree"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
-               android:contentDescription="drink one" />
+               android:contentDescription="drink one"
+               android:background="@drawable/custom_drink_buttons"
+               android:layout_marginBottom="5px"
+               android:layout_marginRight="5px" />
 
        </TableRow>
 
@@ -101,21 +112,30 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
-               android:contentDescription="drink one" />
+               android:contentDescription="drink one"
+               android:background="@drawable/custom_drink_buttons"
+               android:layout_marginBottom="5px"
+               android:layout_marginRight="5px" />
 
            <ImageButton
                android:id="@+id/imgbtn_drinkFive"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
-               android:contentDescription="drink one" />
+               android:contentDescription="drink one"
+               android:background="@drawable/custom_drink_buttons"
+               android:layout_marginBottom="5px"
+               android:layout_marginRight="5px" />
 
            <ImageButton
                android:id="@+id/imgbtn_drinkSix"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
-               android:contentDescription="drink one" />
+               android:contentDescription="drink one"
+               android:background="@drawable/custom_drink_buttons"
+               android:layout_marginBottom="5px"
+               android:layout_marginRight="5px"/>
        </TableRow>
 
        <TableRow
@@ -128,21 +148,30 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
-               android:contentDescription="drink one" />
+               android:contentDescription="drink one"
+               android:background="@drawable/custom_drink_buttons"
+               android:layout_marginBottom="5px"
+               android:layout_marginRight="5px"/>
 
            <ImageButton
                android:id="@+id/imgbtn_drinkEight"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
-               android:contentDescription="drink one" />
+               android:contentDescription="drink one"
+               android:background="@drawable/custom_drink_buttons"
+               android:layout_marginBottom="5px"
+               android:layout_marginRight="5px"/>
 
            <ImageButton
                android:id="@+id/imgbtn_drinkNine"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
-               android:contentDescription="drink one" />
+               android:contentDescription="drink one"
+               android:background="@drawable/custom_drink_buttons"
+               android:layout_marginBottom="5px"
+               android:layout_marginRight="5px"/>
        </TableRow>
    </TableLayout>
 
