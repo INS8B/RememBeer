@@ -51,7 +51,7 @@
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
                android:contentDescription="current drink"
-               android:background="@drawable/custom_drink_buttons"/>
+               android:background="@drawable/beer32"/>
        </TableRow>
    </TableLayout>
    
@@ -76,7 +76,7 @@
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/custom_drink_buttons"
+               android:background="@drawable/beer32"
                android:layout_marginBottom="5px"
                android:layout_marginRight="5px" />
 
@@ -86,7 +86,7 @@
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/custom_drink_buttons"
+               android:background="@drawable/beer32"
                android:layout_marginBottom="5px"
                android:layout_marginRight="5px" />
 
@@ -96,7 +96,7 @@
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/custom_drink_buttons"
+               android:background="@drawable/beer32"
                android:layout_marginBottom="5px"
                android:layout_marginRight="5px" />
 
@@ -113,7 +113,7 @@
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/custom_drink_buttons"
+               android:background="@drawable/beer32"
                android:layout_marginBottom="5px"
                android:layout_marginRight="5px" />
 
@@ -123,7 +123,7 @@
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/custom_drink_buttons"
+               android:background="@drawable/beer32"
                android:layout_marginBottom="5px"
                android:layout_marginRight="5px" />
 
@@ -133,7 +133,7 @@
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/custom_drink_buttons"
+               android:background="@drawable/beer32"
                android:layout_marginBottom="5px"
                android:layout_marginRight="5px"/>
        </TableRow>
@@ -149,7 +149,7 @@
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/custom_drink_buttons"
+               android:background="@drawable/beer32"
                android:layout_marginBottom="5px"
                android:layout_marginRight="5px"/>
 
@@ -159,7 +159,7 @@
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/custom_drink_buttons"
+               android:background="@drawable/beer32"
                android:layout_marginBottom="5px"
                android:layout_marginRight="5px"/>
 
@@ -169,7 +169,7 @@
                android:layout_height="wrap_content"
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/custom_drink_buttons"
+               android:background="@drawable/beer32"
                android:layout_marginBottom="5px"
                android:layout_marginRight="5px"/>
        </TableRow>

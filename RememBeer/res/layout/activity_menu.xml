@@ -16,7 +16,7 @@
         android:layout_height="200dp"
         android:onClick="startDrinking"
         android:layout_centerInParent="true"
-        android:background="@drawable/custom_buttons" />
+        android:background="@drawable/button_default" />
 
     <Button
         android:id="@+id/btSettings"
@@ -27,7 +27,7 @@
         android:layout_marginBottom="25dp"
         android:text="Settings"
         android:onClick="startSettings"
-        android:background="@drawable/custom_buttons" />
+        android:background="@drawable/button_default" />
 
     <Button
         android:id="@+id/btHistory"
@@ -38,6 +38,6 @@
         android:layout_marginTop="25dp"
         android:text="Drinking History"
         android:onClick="startHistory"
-        android:background="@drawable/custom_buttons"/>
+        android:background="@drawable/button_default"/>
 
 </RelativeLayout>
