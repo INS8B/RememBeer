@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Schatten
+    z.B.: Runde Ecken => <corners android:radius="7dp" />
+    -->
+    <item>
+        <shape>
+            <solid android:color="#000000" />
+        </shape>
+    </item>
+    <!-- Füllung -->
+    <item
+        android:top="5px"
+        android:left="5px"
+        android:bottom="5px"
+        android:right="5px" >
+        <shape>
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+</layer-list>
