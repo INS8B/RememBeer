@@ -14,7 +14,7 @@
         android:id="@+id/imgbtnStartDrinking"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:onClick="startDrinking"
+        android:onClick="openEvening"
         android:layout_centerInParent="true"
         android:background="@drawable/button_default" />
 
