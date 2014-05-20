@@ -74,27 +74,24 @@
                android:id="@+id/imgbtn_drinkOne"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/beer32"
+               android:src="@drawable/beer"
                android:onClick="chooseDrinkOne" />
 
            <ImageButton
                android:id="@+id/imgbtn_two"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/beer32"
+               android:src="@drawable/beerglass"
                android:onClick="chooseDrinkTwo" />
 
            <ImageButton
                android:id="@+id/imgbtn_drinkThree"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/beer32"
+               android:src="@drawable/beer"
                android:onClick="chooseDrinkThree" />
 
        </TableRow>
@@ -108,27 +105,24 @@
                android:id="@+id/imgbtn_drinkFour"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/beer32"
+               android:src="@drawable/coctail"
                android:onClick="chooseDrinkFour" />
 
            <ImageButton
                android:id="@+id/imgbtn_drinkFive"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/beer32"
+               android:src="@drawable/coctail"
                android:onClick="chooseDrinkFive" />
 
            <ImageButton
                android:id="@+id/imgbtn_drinkSix"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/beer32"
+               android:src="@drawable/coctail"
                android:onClick="chooseDrinkSix" />
        </TableRow>
 
@@ -141,27 +135,24 @@
                android:id="@+id/imgbtn_drinkSeven"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/beer32"
+               android:src="@drawable/wineglass"
                android:onClick="chooseDrinkSeven" />
 
            <ImageButton
                android:id="@+id/imgbtn_drinkEight"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/beer32"
+               android:src="@drawable/wineglass"
                android:onClick="chooseDrinkEight" />
 
            <ImageButton
                android:id="@+id/imgbtn_drinkNine"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
-               android:background="@drawable/beer32"
+               android:src="@drawable/wineglass"
                android:onClick="chooseDrinkNine" />
        </TableRow>
    </TableLayout>
