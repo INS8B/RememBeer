@@ -77,8 +77,7 @@
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
                android:background="@drawable/beer32"
-               android:layout_marginBottom="5px"
-               android:layout_marginRight="5px" />
+               android:onClick="chooseDrinkOne" />
 
            <ImageButton
                android:id="@+id/imgbtn_two"
@@ -87,8 +86,7 @@
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
                android:background="@drawable/beer32"
-               android:layout_marginBottom="5px"
-               android:layout_marginRight="5px" />
+               android:onClick="chooseDrinkTwo" />
 
            <ImageButton
                android:id="@+id/imgbtn_drinkThree"
@@ -97,8 +95,7 @@
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
                android:background="@drawable/beer32"
-               android:layout_marginBottom="5px"
-               android:layout_marginRight="5px" />
+               android:onClick="chooseDrinkThree" />
 
        </TableRow>
 
@@ -114,8 +111,7 @@
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
                android:background="@drawable/beer32"
-               android:layout_marginBottom="5px"
-               android:layout_marginRight="5px" />
+               android:onClick="chooseDrinkFour" />
 
            <ImageButton
                android:id="@+id/imgbtn_drinkFive"
@@ -124,8 +120,7 @@
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
                android:background="@drawable/beer32"
-               android:layout_marginBottom="5px"
-               android:layout_marginRight="5px" />
+               android:onClick="chooseDrinkFive" />
 
            <ImageButton
                android:id="@+id/imgbtn_drinkSix"
@@ -134,8 +129,7 @@
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
                android:background="@drawable/beer32"
-               android:layout_marginBottom="5px"
-               android:layout_marginRight="5px"/>
+               android:onClick="chooseDrinkSix" />
        </TableRow>
 
        <TableRow
@@ -150,8 +144,7 @@
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
                android:background="@drawable/beer32"
-               android:layout_marginBottom="5px"
-               android:layout_marginRight="5px"/>
+               android:onClick="chooseDrinkSeven" />
 
            <ImageButton
                android:id="@+id/imgbtn_drinkEight"
@@ -160,8 +153,7 @@
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
                android:background="@drawable/beer32"
-               android:layout_marginBottom="5px"
-               android:layout_marginRight="5px"/>
+               android:onClick="chooseDrinkEight" />
 
            <ImageButton
                android:id="@+id/imgbtn_drinkNine"
@@ -170,8 +162,7 @@
                android:src="@drawable/ic_launcher"
                android:contentDescription="drink one"
                android:background="@drawable/beer32"
-               android:layout_marginBottom="5px"
-               android:layout_marginRight="5px"/>
+               android:onClick="chooseDrinkNine" />
        </TableRow>
    </TableLayout>
 

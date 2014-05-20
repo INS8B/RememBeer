@@ -30,12 +30,24 @@ public final class R {
         public static final int button_default=0x7f020003;
         public static final int button_focused=0x7f020004;
         public static final int button_pressed=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
+        public static final int custom_buttons=0x7f020006;
+        public static final int custom_drink_buttons=0x7f020007;
+        public static final int custom_start_button=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
+        public static final int sample_0=0x7f02000a;
+        public static final int sample_1=0x7f02000b;
+        public static final int sample_2=0x7f02000c;
+        public static final int sample_3=0x7f02000d;
+        public static final int sample_4=0x7f02000e;
+        public static final int sample_5=0x7f02000f;
+        public static final int sample_6=0x7f020010;
+        public static final int sample_7=0x7f020011;
     }
     public static final class id {
-        public static final int action_settings=0x7f090015;
+        public static final int action_settings=0x7f090016;
         public static final int btHistory=0x7f090014;
         public static final int btSettings=0x7f090013;
+        public static final int gridview=0x7f090015;
         public static final int imgbtnStartDrinking=0x7f090012;
         public static final int imgbtn_currentDrink=0x7f090005;
         public static final int imgbtn_drinkEight=0x7f090010;
@@ -60,7 +72,8 @@ public final class R {
         public static final int activity_evening=0x7f030000;
         public static final int activity_history=0x7f030001;
         public static final int activity_menu=0x7f030002;
-        public static final int activity_timeline=0x7f030003;
+        public static final int activity_select_drink=0x7f030003;
+        public static final int activity_timeline=0x7f030004;
     }
     public static final class menu {
         public static final int evening=0x7f080000;
