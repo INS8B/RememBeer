@@ -35,8 +35,8 @@
             android:label="@string/title_activity_timeline" >
         </activity>
         <activity
-            android:name="com.isnb.remembeer.Drink_Selection"
-            android:label="Drink Auswählen" >
+            android:name="com.isnb.remembeer.Settings"
+            android:label="Einstellungen" >
         </activity>
     </application>
 

@@ -25,7 +25,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="25dp"
-        android:text="Settings"
+        android:text="Einstellungen"
         android:onClick="startSettings"
         android:background="@drawable/button_default" />
 
@@ -39,5 +39,15 @@
         android:text="Drinking History"
         android:onClick="startDrinking"
         android:background="@drawable/button_default"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/txtvi_testSettings"
+        android:layout_below="@+id/btHistory"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

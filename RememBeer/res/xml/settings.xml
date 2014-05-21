@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="benutzername"
+        android:summary="Name eingeben"
+        android:title="Benutzername" />
+
+    <EditTextPreference
+        android:key="gewicht"
+        android:summary="Gewicht eingeben"
+        android:title="Gewicht"
+        />
+
+    <ListPreference
+        android:key="geschlecht"
+        android:title="Gewicht"
+    />
+
+</PreferenceScreen>
