@@ -37,7 +37,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="25dp"
         android:text="Drinking History"
-        android:onClick="startHistory"
+        android:onClick="startDrinking"
         android:background="@drawable/button_default"/>
 
 </RelativeLayout>
