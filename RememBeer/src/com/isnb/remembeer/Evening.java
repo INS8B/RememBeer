@@ -6,8 +6,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -17,6 +19,9 @@ public class Evening extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+        getActionBar().hide();
         setContentView(R.layout.activity_evening);
     }
 	
@@ -29,6 +34,7 @@ public class Evening extends Activity {
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
+        imgbtn_currentDrink.setImageResource(R.drawable.beer);
 		/*
 		// Name des letzten Getr�nks
 		int drinkId = imgbtn_currentDrink.getResources().getIdentifier("imgbtn_currentDrink", "drawable", getPackageName());
@@ -74,7 +80,7 @@ public class Evening extends Activity {
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 		
-		imgbtn_currentDrink.setImageResource(R.drawable.beer);
+		imgbtn_currentDrink.setImageResource(R.drawable.beerglass);
 	}
 	
 	/**
@@ -86,7 +92,7 @@ public class Evening extends Activity {
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
-        imgbtn_currentDrink.setImageResource(R.drawable.beer);
+        imgbtn_currentDrink.setImageResource(R.drawable.wineglass);
 	}
 	
 	/**
@@ -97,7 +103,8 @@ public class Evening extends Activity {
 		ImageButton imgbtn_currentDrink = (ImageButton) findViewById(R.id.imgbtn_currentDrink);
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
-		
+
+        imgbtn_currentDrink.setImageResource(R.drawable.coctail);
 	}
 	
 	/**
