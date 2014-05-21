@@ -1,9 +1,14 @@
 package com.isnb.remembeer;
 
+import java.util.Map;
+
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
@@ -19,6 +24,21 @@ public class Menu extends Activity {
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         getActionBar().hide();
         setContentView(R.layout.activity_menu);
+        
+
+        // DATABASE testen
+
+        Database db = new Database(Menu.this, "db_remembeer");
+        
+        SQLiteDatabase ddd = db.getWritableDatabase();
+       
+        
+		@SuppressWarnings("deprecation")
+		Map<String,String> tables = ddd.getSyncedTables();
+        
+        String t = "";
+        
+        String h = t;
 	}
 	
 	/** Called when the user touches the button */
