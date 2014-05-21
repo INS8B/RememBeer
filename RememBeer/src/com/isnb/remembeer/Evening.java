@@ -16,37 +16,31 @@ public class Evening extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_evening);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(android.view.Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.evening, menu);
-		return true;
-	}
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_evening);
+    }
 	
 	/**
 	 * 
 	 * @param view
 	 */
 	public void chooseDrinkOne(View view) {
-		ImageButton imgbtn_currentDrink = (ImageButton) findViewById(R.id.imgbtn_currentDrink);
+        ImageButton imgbtn_currentDrink = (ImageButton) findViewById(R.id.imgbtn_currentDrink);
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
-		
-		// Name des letzten Getränks
+
+		/*
+		// Name des letzten Getrï¿½nks
 		int drinkId = imgbtn_currentDrink.getResources().getIdentifier("imgbtn_currentDrink", "drawable", getPackageName());
 		String drinkName = getResources().getResourceName(drinkId);
 
-		// Alkohol Prozent und grösse des letzten Getränks
+		// Alkohol Prozent und grï¿½sse des letzten Getrï¿½nks
 		int alcohol = getAlcohol(drinkName);
 		int drinkSize = getDrinkSize(drinkName);
 		
 		// TODO BERECHNUNG WIE VIEL PROMILLE NEU
 		
-		// Start und End Datum des letzten Getränks
+		// Start und End Datum des letzten Getrï¿½nks
 		DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
 		
 		Date startLastDrink = new Date();
@@ -59,15 +53,16 @@ public class Evening extends Activity {
 			e.printStackTrace();
 		}
 		
-		// TODO letztes Getränk in DB speichern
+		// TODO letztes Getrï¿½nk in DB speichern
 		
-		// Bild, aktuelle Promille und Zeit des neuen Getränks
+		// Bild, aktuelle Promille und Zeit des neuen Getrï¿½nks
 		imgbtn_currentDrink.setImageResource(R.drawable.beer);
 		String currentTime = dateFormat.format(new Date());
 		txtvi_currentDrinkTime.setText(currentTime);
 		
 		// TODO neuer Promille Wert TextView anzeigen
 		txtvi_currentBloodAlcohol.setText("0.3");
+		*/
 	}
 	
 	/**
@@ -90,7 +85,8 @@ public class Evening extends Activity {
 		ImageButton imgbtn_currentDrink = (ImageButton) findViewById(R.id.imgbtn_currentDrink);
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
-		
+
+        imgbtn_currentDrink.setImageResource(R.drawable.beer);
 	}
 	
 	/**
@@ -161,8 +157,8 @@ public class Evening extends Activity {
 	}
 	
 	/**
-	 * gibt den Alkohol Prozent des Getränks zurück
-	 * @param imageName Bildname des Getränks
+	 * gibt den Alkohol Prozent des Getrï¿½nks zurï¿½ck
+	 * @param imageName Bildname des Getrï¿½nks
 	 * @return Alkohol Prozent
 	 */
 	private int getAlcohol(String imageName) {
@@ -178,10 +174,10 @@ public class Evening extends Activity {
 	}
 	
 	/**
-	 * gibt die Grösse des Getränks zurück
+	 * gibt die Grï¿½sse des Getrï¿½nks zurï¿½ck
 	 * 
-	 * @param imageName Bildname des Getränks
-	 * @return Grösse
+	 * @param imageName Bildname des Getrï¿½nks
+	 * @return Grï¿½sse
 	 */
 	private int getDrinkSize(String imageName) {
 		int drinkSize = 0;
