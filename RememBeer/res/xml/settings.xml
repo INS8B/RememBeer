@@ -10,11 +10,15 @@
         android:key="gewicht"
         android:summary="Gewicht eingeben"
         android:title="Gewicht"
+        android:inputType="number"
         />
 
     <ListPreference
         android:key="geschlecht"
-        android:title="Gewicht"
+        android:title="Geschlecht"
+        android:dialogTitle="Geschlecht auswählen"
+        android:entries="@array/entries"
+        android:entryValues="@array/values"
     />
 
 </PreferenceScreen>
