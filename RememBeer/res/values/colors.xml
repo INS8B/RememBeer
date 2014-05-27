@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="backgroundMenu">#E1E7ED</color>
-    
+    <color name="red">#FF0000</color>
 </resources>

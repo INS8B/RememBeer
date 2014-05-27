@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class Evening extends Activity {
@@ -91,22 +92,22 @@ public class Evening extends Activity {
 		//Date lastEndDrinkTime = dateFormat.parse(currentTime);
 		//Date lastStartDrinkTime = dateFormat.parse(txtvi_currentDrinkTime.getText().toString());
 		
-		txtvi_currentDrinkTime.setText(currentTime);
+
 		
 		//TextView txtvi_testSettings = (TextView) findViewById(R.id.txtvi_testSettings);
-        //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Evening.this);
 
-        //int gewicht = prefs.getInt("gewicht", 0);
-        //int sex = prefs.getInt("geschlecht", 0);
-        
-        //Menge in ml  x  (Vol.-% / 100)  x  0,8 = Gramm reiner Alkohol
-		double alcohol = 6/100;// * 0.8;
-        
-        //  ALkoholmenge in g / (k�rpergewicht in kg * k�rperfl�ssigkeit)		k�rperfl�ssigkeit: M=0.68, F=0.55
-        double promille = alcohol / (52 * 0.55);
-        
-        txtvi_currentBloodAlcohol.setText(String.valueOf(promille));
-	}
+
+        int size = 300; //Grösse des Getränks in ml
+        double volume = 0.05; //Anteil an Alkohol in Getränk als dezimalzahl
+
+        if ("0.0‰".equals(txtvi_currentBloodAlcohol.getText()) && "00:00".equals(txtvi_currentDrinkTime.getText())) {
+            txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromille(size, volume)) + "‰");
+            txtvi_currentDrinkTime.setText(currentTime);
+        } else {
+            txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(size, volume)) + "‰");
+            txtvi_currentDrinkTime.setText(dateFormat.format(new Date()));
+        }
+    }
 	
 	/**
 	 * 
@@ -140,7 +141,8 @@ public class Evening extends Activity {
 		ImageButton imgbtn_currentDrink = (ImageButton) findViewById(R.id.imgbtn_currentDrink);
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
-		
+
+        imgbtn_currentDrink.setImageResource(0); //Clear Image
 	}
 	
 	/**
@@ -151,7 +153,8 @@ public class Evening extends Activity {
 		ImageButton imgbtn_currentDrink = (ImageButton) findViewById(R.id.imgbtn_currentDrink);
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
-		
+
+        imgbtn_currentDrink.setImageResource(0); //Clear Image
 	}
 	
 	/**
@@ -162,7 +165,8 @@ public class Evening extends Activity {
 		ImageButton imgbtn_currentDrink = (ImageButton) findViewById(R.id.imgbtn_currentDrink);
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
-		
+
+        imgbtn_currentDrink.setImageResource(0); //Clear Image
 	}
 	
 	/**
@@ -173,7 +177,8 @@ public class Evening extends Activity {
 		ImageButton imgbtn_currentDrink = (ImageButton) findViewById(R.id.imgbtn_currentDrink);
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
-		
+
+        imgbtn_currentDrink.setImageResource(0); //Clear Image
 	}
 	
 	/**
@@ -185,7 +190,8 @@ public class Evening extends Activity {
 		ImageButton imgbtn_currentDrink = (ImageButton) findViewById(R.id.imgbtn_currentDrink);
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
-		
+
+        imgbtn_currentDrink.setImageResource(0); //Clear Image
 	}
 	
 	/**
@@ -222,5 +228,64 @@ public class Evening extends Activity {
 		
 		return drinkSize;
 	}
+
+    public double calcPromille (int drinkSize, double volume) {
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Evening.this);
+        int gewicht = Integer.parseInt(prefs.getString("gewicht", ""));
+        int sex = Integer.parseInt(prefs.getString("geschlecht", ""));
+
+        double pure_alc;
+        double alc_gramms;
+        double wasseranteil; //Wasseranteil im Körper
+        double promille;
+
+        // 300ml (grösse einer Stange) * 0.05 (=5% durchschnittlicher Alkoholgehalt von Bier)
+        pure_alc = drinkSize * volume;
+
+        //Alkohol in Getränk (pure_alc) * spezifisches Gewicht von Alkohol (0.81)
+        alc_gramms = pure_alc * 0.81;
+
+        if (sex == 1) { //Falls männlich
+            wasseranteil = gewicht * 0.7;
+            promille = alc_gramms / wasseranteil;
+            promille = promille * 3; //Resorptionsdefizit
+        } else if (sex == 2) {//Falls weiblich
+            wasseranteil = gewicht * 0.6;
+            promille = alc_gramms / wasseranteil;
+            promille = promille * 3; //Resorptionsdefizit
+        } else {
+            Toast.makeText(getApplicationContext(), "Bitte in den Einstellungen ein Geschlecht auswählen!", Toast.LENGTH_SHORT).show();
+            promille = 0;
+        }
+        return promille;
+    }
+
+    public double calcPromilleZeit (int drinkSize, double volume) {
+        TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
+        TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
+        DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
+
+        double currentBloodAlc;
+        long timeDiff;
+        double hourDiff;
+        double abgb_alc;
+
+        currentBloodAlc = Double.parseDouble(txtvi_currentBloodAlcohol.getText().toString().substring(0,3));
+        Date timeOld = new Date();
+        try {
+            timeOld = dateFormat.parse(txtvi_currentDrinkTime.getText().toString());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        timeDiff = (new Date()).getTime() - timeOld.getTime();
+        hourDiff = ((double)timeDiff) / (60 * 60 * 1000);
+        abgb_alc = hourDiff * 0.15; //0.15‰ werden pro Stunde abgebaut
+
+        currentBloodAlc = currentBloodAlc - abgb_alc;
+        currentBloodAlc = currentBloodAlc + calcPromille(drinkSize, volume);
+
+        return currentBloodAlc;
+    }
 
 }

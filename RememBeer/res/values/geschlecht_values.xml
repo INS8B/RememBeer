@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="entries">
+    <string-array name="entries">
         <item>Männlich</item>
         <item>Weiblich</item>
-    </array>
-    <array name="values">
+    </string-array>
+    <string-array name="values">
         <item>1</item>
-        <item>0</item>
-    </array>
+        <item>2</item>
+    </string-array>
 </resources>

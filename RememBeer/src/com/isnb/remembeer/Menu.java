@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
@@ -23,10 +24,28 @@ public class Menu extends Activity {
         getActionBar().hide();
         setContentView(R.layout.activity_menu);
 
+        boolean firstrun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("firstrun", true);
+        if (firstrun){
+            Intent intent = new Intent(this, Settings.class);
+            startActivity(intent);
+            Toast.makeText(getApplicationContext(), "Bitte als Erstes die Einstellugen ausfüllen", Toast.LENGTH_LONG).show();
+            // Save the state
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                    .edit()
+                    .putBoolean("firstrun", false)
+                    .commit();
+        }
+
         TextView txtvi_testSettings = (TextView) findViewById(R.id.txtvi_testSettings);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Menu.this);
 
-        txtvi_testSettings.setText(prefs.getString("benutzername", "Bitte Name eingeben"));
+        try {
+            txtvi_testSettings.setText(prefs.getString("benutzername", "Hans Muster") + "\n" +
+                    prefs.getString("gewicht", "NA") + "\n" +
+                    prefs.getString("geschlecht", "NA"));
+        } catch (Exception e) {
+            Log.wtf("SharedPrefs", e);
+        }
 
 	}
 
@@ -38,7 +57,13 @@ public class Menu extends Activity {
         TextView txtvi_testSettings = (TextView) findViewById(R.id.txtvi_testSettings);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Menu.this);
 
-        txtvi_testSettings.setText(prefs.getString("benutzername", "Bitte Name eingeben"));
+        try {
+            txtvi_testSettings.setText(prefs.getString("benutzername", "Hans Muster") + "\n" +
+                    prefs.getString("gewicht", "NA") + "\n" +
+                    prefs.getString("geschlecht", "NA"));
+        } catch (Exception e) {
+            Log.wtf("SharedPrefs", e);
+        }
     }
 
 	/** Called when the user touches the button */

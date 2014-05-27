@@ -4,13 +4,15 @@
     <EditTextPreference
         android:key="benutzername"
         android:summary="Name eingeben"
-        android:title="Benutzername" />
+        android:title="Benutzername"
+        android:defaultValue="John"/>
 
     <EditTextPreference
         android:key="gewicht"
         android:summary="Gewicht eingeben"
         android:title="Gewicht"
         android:inputType="number"
+        android:defaultValue="70"
         />
 
     <ListPreference
@@ -19,6 +21,7 @@
         android:dialogTitle="Geschlecht auswählen"
         android:entries="@array/entries"
         android:entryValues="@array/values"
+        android:defaultValue="1"
     />
 
 </PreferenceScreen>
