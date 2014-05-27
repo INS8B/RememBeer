@@ -17,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-        //database.execSQL(LocationTable.CREATE_TABLE_LOCATIONS);
+        database.execSQL(DrinkTable.CREATE_TABLE_DRINK);
     }
 
     @Override
@@ -26,7 +26,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "Upgrading database from version " + oldVersion + " to "
                         + newVersion + ", which will destroy all old data"
         );
-      //  db.execSQL("DROP TABLE IF EXISTS " + LocationTable.TABLE_LOCATIONS);
+        db.execSQL("DROP TABLE IF EXISTS " + DrinkTable.TABLE_DRINK);
         onCreate(db);
     }
 }
