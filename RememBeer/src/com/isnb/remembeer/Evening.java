@@ -239,6 +239,15 @@ public class Evening extends Activity {
         txtvi_currentBloodAlcohol.setText("0.0‰");
         txtvi_currentDrinkTime.setText("00:00");
 	}
+
+    public void neuBerechnen (View view) {
+        TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
+        TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
+        DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
+
+        txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(0, 0.0)) + "‰");
+        txtvi_currentDrinkTime.setText(dateFormat.format(new Date()));
+    }
 	
 	/**
 	 * gibt den Alkohol Prozent des Getr�nks zur�ck
