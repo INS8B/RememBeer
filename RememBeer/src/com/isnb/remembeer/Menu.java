@@ -47,12 +47,6 @@ public class Menu extends Activity {
 	    startActivity(intent);
 	}
 	
-	public void startDrinking (View view) {
-        Intent intent = new Intent(this, Evening.class);
-        startActivity(intent);
-        //Toast.makeText(getApplicationContext(), "Hier können dann die Getränke ausgewählt werden!", Toast.LENGTH_SHORT).show();
-	}
-	
 	public void startSettings (View view) {
 		Intent intent = new Intent(this, Settings.class);
 	    startActivity(intent);

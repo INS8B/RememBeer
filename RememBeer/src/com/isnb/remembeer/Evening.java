@@ -6,8 +6,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
@@ -74,13 +76,36 @@ public class Evening extends Activity {
 	/**
 	 * 
 	 * @param view
+	 * @throws ParseException 
 	 */
-	public void chooseDrinkTwo(View view) {
+	public void chooseDrinkTwo(View view) throws ParseException {
 		ImageButton imgbtn_currentDrink = (ImageButton) findViewById(R.id.imgbtn_currentDrink);
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 		
 		imgbtn_currentDrink.setImageResource(R.drawable.beerglass);
+		
+		DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
+		String currentTime = dateFormat.format(new Date());
+		
+		//Date lastEndDrinkTime = dateFormat.parse(currentTime);
+		//Date lastStartDrinkTime = dateFormat.parse(txtvi_currentDrinkTime.getText().toString());
+		
+		txtvi_currentDrinkTime.setText(currentTime);
+		
+		//TextView txtvi_testSettings = (TextView) findViewById(R.id.txtvi_testSettings);
+        //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Evening.this);
+
+        //int gewicht = prefs.getInt("gewicht", 0);
+        //int sex = prefs.getInt("geschlecht", 0);
+        
+        //Menge in ml  x  (Vol.-% / 100)  x  0,8 = Gramm reiner Alkohol
+		double alcohol = 6/100;// * 0.8;
+        
+        //  ALkoholmenge in g / (körpergewicht in kg * körperflüssigkeit)		körperflüssigkeit: M=0.68, F=0.55
+        double promille = alcohol / (52 * 0.55);
+        
+        txtvi_currentBloodAlcohol.setText(String.valueOf(promille));
 	}
 	
 	/**

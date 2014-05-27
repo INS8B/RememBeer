@@ -5,13 +5,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-public class Database extends SQLiteOpenHelper {
+public class Database1 extends SQLiteOpenHelper {
 
 
 		   private SQLiteDatabase db;
 
 		   // Konstruktor
-		   public Database(Context activity, String dbName) {
+		   public Database1(Context activity, String dbName) {
 		      super(activity, dbName, null, 1); 
 		      db = getWritableDatabase();
 		   }
