@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -26,6 +27,37 @@ public class Evening extends Activity {
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         getActionBar().hide();
         setContentView(R.layout.activity_evening);
+        SharedPreferences prefs = getSharedPreferences("Evening", Context.MODE_PRIVATE);
+
+        ImageButton imgbtn_currentDrink = (ImageButton) findViewById(R.id.imgbtn_currentDrink);
+        TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
+        TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
+
+        if (prefs.contains("currentImgButton")){
+            imgbtn_currentDrink.setImageResource(prefs.getInt("currentImgButton", 0));
+        }
+        if (prefs.contains("currentImgButton")){
+            txtvi_currentDrinkTime.setText(prefs.getString("currentDrinkTime", "00:00"));
+        }
+        if (prefs.contains("currentImgButton")){
+            txtvi_currentBloodAlcohol.setText(prefs.getString("currentBloodAlcohol", "0.0‰"));
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ImageButton imgbtn_currentDrink = (ImageButton) findViewById(R.id.imgbtn_currentDrink);
+        TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
+        TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
+
+        int img_ID = (Integer) imgbtn_currentDrink.getTag();
+
+        SharedPreferences.Editor prefEditor = getSharedPreferences("Evening", Context.MODE_PRIVATE).edit();
+        prefEditor.putString("currentBloodAlcohol", txtvi_currentBloodAlcohol.getText().toString());
+        prefEditor.putString("currentDrinkTime", txtvi_currentDrinkTime.getText().toString());
+        prefEditor.putInt("currentImgButton", img_ID);
+        prefEditor.commit();
     }
 	
 	/**
@@ -38,6 +70,7 @@ public class Evening extends Activity {
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
         imgbtn_currentDrink.setImageResource(R.drawable.beer);
+        imgbtn_currentDrink.setTag(R.drawable.beer);
 		/*
 		// Name des letzten Getr�nks
 		int drinkId = imgbtn_currentDrink.getResources().getIdentifier("imgbtn_currentDrink", "drawable", getPackageName());
@@ -85,6 +118,7 @@ public class Evening extends Activity {
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 		
 		imgbtn_currentDrink.setImageResource(R.drawable.beerglass);
+        imgbtn_currentDrink.setTag(R.drawable.beerglass);
 		
 		DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
 		String currentTime = dateFormat.format(new Date());
@@ -119,6 +153,7 @@ public class Evening extends Activity {
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
         imgbtn_currentDrink.setImageResource(R.drawable.wineglass);
+        imgbtn_currentDrink.setTag(R.drawable.wineglass);
 	}
 	
 	/**
@@ -131,6 +166,7 @@ public class Evening extends Activity {
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
         imgbtn_currentDrink.setImageResource(R.drawable.coctail);
+        imgbtn_currentDrink.setTag(R.drawable.coctail);
 	}
 	
 	/**
@@ -143,6 +179,7 @@ public class Evening extends Activity {
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
         imgbtn_currentDrink.setImageResource(0); //Clear Image
+        imgbtn_currentDrink.setTag(0);
 	}
 	
 	/**
@@ -155,6 +192,7 @@ public class Evening extends Activity {
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
         imgbtn_currentDrink.setImageResource(0); //Clear Image
+        imgbtn_currentDrink.setTag(0);
 	}
 	
 	/**
@@ -167,6 +205,7 @@ public class Evening extends Activity {
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
         imgbtn_currentDrink.setImageResource(0); //Clear Image
+        imgbtn_currentDrink.setTag(0);
 	}
 	
 	/**
@@ -179,6 +218,7 @@ public class Evening extends Activity {
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
         imgbtn_currentDrink.setImageResource(0); //Clear Image
+        imgbtn_currentDrink.setTag(0);
 	}
 	
 	/**
@@ -191,7 +231,13 @@ public class Evening extends Activity {
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
-        imgbtn_currentDrink.setImageResource(0); //Clear Image
+        //imgbtn_currentDrink.setImageResource(0); //Clear Image
+        //imgbtn_currentDrink.setTag(0);
+
+        /** Temporär um die Promillen zurückzusetzen */
+        imgbtn_currentDrink.setImageResource(0);
+        txtvi_currentBloodAlcohol.setText("0.0‰");
+        txtvi_currentDrinkTime.setText("00:00");
 	}
 	
 	/**
