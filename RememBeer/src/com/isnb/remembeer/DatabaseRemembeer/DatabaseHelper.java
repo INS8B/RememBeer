@@ -7,7 +7,7 @@ import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 	
-	private static final String DATABASE_NAME = "MeetLazyFriends.db";
+	private static final String DATABASE_NAME = "RememBeer.db";
     private static final int DATABASE_VERSION = 1;
 
 

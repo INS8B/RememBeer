@@ -22,32 +22,31 @@
         android:id="@+id/btSettings"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imgbtnStartDrinking"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
-        android:text="Einstellungen"
+        android:background="@drawable/button_default"
         android:onClick="startSettings"
-        android:background="@drawable/button_default" />
+        android:text="Einstellungen" />
 
     <Button
         android:id="@+id/btHistory"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="25dp"
-        android:text="Drinking History"
+        android:layout_above="@+id/btSettings"
+        android:layout_alignLeft="@+id/btSettings"
+        android:background="@drawable/button_default"
         android:onClick="openEvening"
-        android:background="@drawable/button_default"/>
+        android:text="Drinking History" />
 
     <TextView
+        android:id="@+id/txtvi_testSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/txtvi_testSettings"
-        android:layout_below="@+id/btHistory"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/imgbtnStartDrinking"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="38dp"
+        android:text="Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
