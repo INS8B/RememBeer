@@ -6,224 +6,313 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/white"
     tools:context=".Evening" >
 
-   <TableLayout
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="37dp" >
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
 
-       <TableRow
-           android:id="@+id/tblrow_currentPromille"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content" >
-           
-           <TextView
-		        android:id="@+id/textView1"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:text="@string/text_currentPromille"
-		        android:textAppearance="?android:attr/textAppearanceMedium" />
-		
-		    <TextView
-		        android:id="@+id/txtvi_currentBloodAlcohol"
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        android:text="@string/text_nullPromille"
+        <TableRow
+            android:id="@+id/tblrow_currentPromille"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_currentPromille"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/txtvi_currentBloodAlcohol"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
-		        android:textAppearance="?android:attr/textAppearanceLarge" />
-       </TableRow>
+                android:text="@string/text_nullPromille"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
 
-       <TableRow
-           android:id="@+id/tblrow_currentDrink"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content" >
+        <TableRow
+            android:id="@+id/tblrow_currentDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
 
-           <TextView
-               android:id="@+id/txtvi_currentDrinkTime"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="@string/text_time"
-               android:textAppearance="?android:attr/textAppearanceMedium" />
+            <TextView
+                android:id="@+id/txtvi_currentDrinkTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_time"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-           <ImageButton
-               android:id="@+id/imgbtn_currentDrink"
-               android:layout_width="80dp"
-               android:layout_height="80dp"
-               android:contentDescription="@string/contdes_currentDrink" />
-       </TableRow>
+            <ImageButton
+                android:id="@+id/imgbtn_currentDrink"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="@string/contdes_currentDrink" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:stretchColumns="0,1,2" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5" >
+
+            <ImageButton
+                android:id="@+id/imgbtn_drinkOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/drink_margin"
+                android:background="@color/white"
+                android:contentDescription="@string/contdes_drinkOne"
+                android:src="@drawable/beerbottle"
+                android:onClick="chooseDrinkOne" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_drinkTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/drink_margin"
+                android:background="@color/white"
+                android:contentDescription="@string/contdes_drinkTwo"
+                android:src="@drawable/beerglass"
+                android:onClick="chooseDrinkTwo" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_drinkThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/drink_margin"
+                android:background="@color/white"
+                android:contentDescription="@string/contdes_drinkThree"
+                android:src="@drawable/beer"
+                android:onClick="chooseDrinkThree" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tblrow_linesOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/vi_lineOne"
+                android:layout_width="10dp"
+                android:layout_height="@dimen/bar_height"
+                android:background="@color/lightBlue" />
+
+            <View
+                android:id="@+id/vi_lineTwo"
+                android:layout_width="10dp"
+                android:layout_height="@dimen/bar_height"
+                android:background="@color/lightBlue" />
+
+            <View
+                android:id="@+id/vi_lineThree"
+                android:layout_width="10dp"
+                android:layout_height="@dimen/bar_height"
+                android:background="@color/lightBlue" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/imgbtn_drinkFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/drink_margin"
+                android:background="@color/white"
+                android:contentDescription="@string/contdes_drinkFour"
+                android:src="@drawable/wineglass"
+                android:onClick="chooseDrinkFour" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_drinkFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/drink_margin"
+                android:background="@color/white"
+                android:contentDescription="@string/contdes_drinkFive"
+                android:src="@drawable/wineglass"
+                android:onClick="chooseDrinkFive" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_drinkSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/drink_margin"
+                android:background="@color/white"
+                android:contentDescription="@string/contdes_drinkSix"
+                android:src="@drawable/wineglass"
+                android:onClick="chooseDrinkSix" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tblrow_linesTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/vi_lineFour"
+                android:layout_width="10dp"
+                android:layout_height="@dimen/bar_height"
+                android:background="@color/lightBlue" />
+
+            <View
+                android:id="@+id/vi_lineFive"
+                android:layout_width="10dp"
+                android:layout_height="@dimen/bar_height"
+                android:background="@color/lightBlue" />
+
+            <View
+                android:id="@+id/vi_lineSix"
+                android:layout_width="10dp"
+                android:layout_height="@dimen/bar_height"
+                android:background="@color/lightBlue" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/imgbtn_drinkSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/drink_margin"
+                android:background="@color/white"
+                android:contentDescription="@string/contdes_drinkSeven"
+                android:src="@drawable/coctail"
+                android:onClick="chooseDrinkSeven" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_drinkEight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/drink_margin"
+                android:background="@color/white"
+                android:contentDescription="@string/contdes_drinkEight"
+                android:src="@drawable/coctail"
+                android:onClick="chooseDrinkEight" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_drinkNine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/drink_margin"
+                android:background="@color/white"
+                android:contentDescription="@string/contdes_drinkNine"
+                android:src="@drawable/coctail"
+                android:onClick="chooseDrinkNine" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tblrow_linesThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/vi_lineSeven"
+                android:layout_width="10dp"
+                android:layout_height="@dimen/bar_height"
+                android:background="@color/lightBlue" />
+
+            <View
+                android:id="@+id/vi_lineEight"
+                android:layout_width="10dp"
+                android:layout_height="@dimen/bar_height"
+                android:background="@color/lightBlue" />
+
+            <View
+                android:id="@+id/vi_lineNine"
+                android:layout_width="10dp"
+                android:layout_height="@dimen/bar_height"
+                android:background="@color/lightBlue" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/imgbtn_drinkTen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/drink_margin"
+                android:background="@color/white"
+                android:contentDescription="@string/contdes_drinkTen"
+                android:src="@drawable/coctail"
+                android:onClick="chooseDrinkSeven" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_drinkEleven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/drink_margin"
+                android:background="@color/white"
+                android:contentDescription="@string/contdes_drinkEleven"
+                android:src="@drawable/coctail"
+                android:onClick="chooseDrinkEight" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_drinkTwelve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/drink_margin"
+                android:background="@color/white"
+                android:contentDescription="@string/contdes_drinkTwelve"
+                android:src="@drawable/coctail"
+                android:onClick="chooseDrinkNine" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tblrow_linesFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/vi_lineTen"
+                android:layout_width="10dp"
+                android:layout_height="@dimen/bar_height"
+                android:background="@color/lightBlue" />
+
+            <View
+                android:id="@+id/vi_lineEleven"
+                android:layout_width="10dp"
+                android:layout_height="@dimen/bar_height"
+                android:background="@color/lightBlue" />
+
+            <View
+                android:id="@+id/vi_lineTwelve"
+                android:layout_width="10dp"
+                android:layout_height="@dimen/bar_height"
+                android:background="@color/lightBlue" />
+        </TableRow>
 
 
-   </TableLayout>
-   
-    
-
-   <TableLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_alignParentBottom="true"
-       android:layout_alignParentRight="true"
-       android:stretchColumns="0,1,2" >
-
-       <TableRow
-           android:id="@+id/tableRow1"
-           android:layout_width="match_parent"
-           android:layout_height="0dp"
-           android:layout_weight="5" >
-
-           <ImageButton
-               android:id="@+id/imgbtn_drinkOne"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:contentDescription="@string/contdes_drinkOne"
-               android:layout_margin="5dp"
-               android:background="#00C8FF"
-               android:src="@drawable/beerbottle"
-               android:onClick="chooseDrinkOne" />
-
-           <ImageButton
-               android:id="@+id/imgbtn_drinkTwo"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_margin="5dp"
-               android:background="#00C8FF"
-               android:contentDescription="@string/contdes_drinkTwo"
-               android:onClick="chooseDrinkTwo"
-               android:src="@drawable/beerglass" />
-
-           <ImageButton
-               android:id="@+id/imgbtn_drinkThree"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_margin="5dp"
-               android:contentDescription="@string/contdes_drinkThree"
-               android:background="#00C8FF"
-               android:src="@drawable/beer"
-               android:onClick="chooseDrinkThree" />
-
-       </TableRow>
-
-       <TableRow
-           android:id="@+id/tableRow2"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content" >
-
-           <ImageButton
-               android:id="@+id/imgbtn_drinkFour"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_margin="5dp"
-               android:contentDescription="@string/contdes_drinkFour"
-               android:background="#00C8FF"
-               android:src="@drawable/wineglass"
-               android:onClick="chooseDrinkFour" />
-
-           <ImageButton
-               android:id="@+id/imgbtn_drinkFive"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_margin="5dp"
-               android:contentDescription="@string/contdes_drinkFive"
-               android:background="#00C8FF"
-               android:src="@drawable/wineglass"
-               android:onClick="chooseDrinkFive" />
-
-           <ImageButton
-               android:id="@+id/imgbtn_drinkSix"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_margin="5dp"
-               android:contentDescription="@string/contdes_drinkSix"
-               android:background="#00C8FF"
-               android:src="@drawable/wineglass"
-               android:onClick="chooseDrinkSix" />
-       </TableRow>
-
-       <TableRow
-           android:id="@+id/tableRow3"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content" >
-
-           <ImageButton
-               android:id="@+id/imgbtn_drinkSeven"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_margin="5dp"
-               android:background="#00C8FF"
-               android:contentDescription="@string/contdes_drinkSeven"
-               android:onClick="chooseDrinkSeven"
-               android:src="@drawable/coctail" />
-
-           <ImageButton
-               android:id="@+id/imgbtn_drinkEight"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_margin="5dp"
-               android:contentDescription="@string/contdes_drinkEight"
-               android:background="#00C8FF"
-               android:src="@drawable/coctail"
-               android:onClick="chooseDrinkEight" />
-
-           <ImageButton
-               android:id="@+id/imgbtn_drinkNine"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_margin="5dp"
-               android:contentDescription="@string/contdes_drinkNine"
-               android:background="#00C8FF"
-               android:src="@drawable/coctail"
-               android:onClick="chooseDrinkNine" />
-       	</TableRow>
-       	
-       	<TableRow
-           android:id="@+id/tableRow4"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content" >
-
-           <ImageButton
-               android:id="@+id/imgbtn_drinkTen"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_margin="5dp"
-               android:contentDescription="@string/contdes_drinkTen"
-               android:background="#00C8FF"
-               android:src="@drawable/coctail"
-               android:onClick="chooseDrinkSeven" />
-
-           <ImageButton
-               android:id="@+id/imgbtn_drinkEleven"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_margin="5dp"
-               android:contentDescription="@string/contdes_drinkEleven"
-               android:background="#00C8FF"
-               android:src="@drawable/coctail"
-               android:onClick="chooseDrinkEight" />
-
-           <ImageButton
-               android:id="@+id/imgbtn_drinkTwelve"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_margin="5dp"
-               android:contentDescription="@string/contdes_drinkTwelve"
-               android:background="#00C8FF"
-               android:src="@drawable/coctail"
-               android:onClick="chooseDrinkNine" />
-       	</TableRow>
-
-		<Button
-         	android:id="@+id/btn_calcPromille"
-         	android:layout_width="150dp"
-          	android:layout_height="50dp"
-          	android:text="@string/text_newCalculate"
-         	android:background="#00C8FF"
-       		android:textColor="#FFFFFF"
-           	android:onClick="neuBerechnen"/>
-
-   </TableLayout>
-
-   
-
-   
+        
+        <Button
+            android:id="@+id/btn_calcPromille"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/lightBlue"
+            android:onClick="neuBerechnen"
+            android:text="@string/text_newCalculate"
+            android:textColor="@color/white" />
+    </TableLayout>
 
 </RelativeLayout>

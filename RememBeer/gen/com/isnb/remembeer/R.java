@@ -16,7 +16,10 @@ public final class R {
     }
     public static final class color {
         public static final int backgroundMenu=0x7f050000;
+        public static final int black=0x7f050003;
+        public static final int lightBlue=0x7f050004;
         public static final int red=0x7f050001;
+        public static final int white=0x7f050002;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -27,6 +30,8 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f060000;
         public static final int activity_vertical_margin=0x7f060001;
+        public static final int bar_height=0x7f060002;
+        public static final int drink_margin=0x7f060003;
     }
     public static final class drawable {
         public static final int background_repeat=0x7f020000;
@@ -49,35 +54,51 @@ public final class R {
         public static final int zur_bar=0x7f020011;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b001c;
-        public static final int btn_calcPromille=0x7f0b0016;
-        public static final int btn_history=0x7f0b001a;
-        public static final int btn_settings=0x7f0b0019;
+        public static final int action_settings=0x7f0b002c;
+        public static final int btn_calcPromille=0x7f0b0026;
+        public static final int btn_history=0x7f0b002a;
+        public static final int btn_settings=0x7f0b0029;
         public static final int imgbtn_currentDrink=0x7f0b0005;
-        public static final int imgbtn_drinkEight=0x7f0b0010;
-        public static final int imgbtn_drinkEleven=0x7f0b0014;
-        public static final int imgbtn_drinkFive=0x7f0b000c;
-        public static final int imgbtn_drinkFour=0x7f0b000b;
-        public static final int imgbtn_drinkNine=0x7f0b0011;
+        public static final int imgbtn_drinkEight=0x7f0b0018;
+        public static final int imgbtn_drinkEleven=0x7f0b0020;
+        public static final int imgbtn_drinkFive=0x7f0b0010;
+        public static final int imgbtn_drinkFour=0x7f0b000f;
+        public static final int imgbtn_drinkNine=0x7f0b0019;
         public static final int imgbtn_drinkOne=0x7f0b0007;
-        public static final int imgbtn_drinkSeven=0x7f0b000f;
-        public static final int imgbtn_drinkSix=0x7f0b000d;
-        public static final int imgbtn_drinkTen=0x7f0b0013;
+        public static final int imgbtn_drinkSeven=0x7f0b0017;
+        public static final int imgbtn_drinkSix=0x7f0b0011;
+        public static final int imgbtn_drinkTen=0x7f0b001f;
         public static final int imgbtn_drinkThree=0x7f0b0009;
-        public static final int imgbtn_drinkTwelve=0x7f0b0015;
+        public static final int imgbtn_drinkTwelve=0x7f0b0021;
         public static final int imgbtn_drinkTwo=0x7f0b0008;
-        public static final int imgbtn_startDrinking=0x7f0b0018;
-        public static final int summary=0x7f0b001b;
+        public static final int imgbtn_startDrinking=0x7f0b0028;
+        public static final int summary=0x7f0b002b;
         public static final int tableRow1=0x7f0b0006;
-        public static final int tableRow2=0x7f0b000a;
-        public static final int tableRow3=0x7f0b000e;
-        public static final int tableRow4=0x7f0b0012;
+        public static final int tableRow2=0x7f0b000e;
+        public static final int tableRow3=0x7f0b0016;
+        public static final int tableRow4=0x7f0b001e;
         public static final int tblrow_currentDrink=0x7f0b0003;
         public static final int tblrow_currentPromille=0x7f0b0000;
+        public static final int tblrow_linesFour=0x7f0b0022;
+        public static final int tblrow_linesOne=0x7f0b000a;
+        public static final int tblrow_linesThree=0x7f0b001a;
+        public static final int tblrow_linesTwo=0x7f0b0012;
         public static final int textView1=0x7f0b0001;
         public static final int txtvi_currentBloodAlcohol=0x7f0b0002;
         public static final int txtvi_currentDrinkTime=0x7f0b0004;
-        public static final int txtvi_testSettings=0x7f0b0017;
+        public static final int txtvi_testSettings=0x7f0b0027;
+        public static final int vi_lineEight=0x7f0b001c;
+        public static final int vi_lineEleven=0x7f0b0024;
+        public static final int vi_lineFive=0x7f0b0014;
+        public static final int vi_lineFour=0x7f0b0013;
+        public static final int vi_lineNine=0x7f0b001d;
+        public static final int vi_lineOne=0x7f0b000b;
+        public static final int vi_lineSeven=0x7f0b001b;
+        public static final int vi_lineSix=0x7f0b0015;
+        public static final int vi_lineTen=0x7f0b0023;
+        public static final int vi_lineThree=0x7f0b000d;
+        public static final int vi_lineTwelve=0x7f0b0025;
+        public static final int vi_lineTwo=0x7f0b000c;
     }
     public static final class layout {
         public static final int activity_evening=0x7f030000;
