@@ -40,9 +40,7 @@ public class Menu extends Activity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Menu.this);
 
         try {
-            txtvi_testSettings.setText(prefs.getString("benutzername", "Hans Muster") + "\n" +
-                    prefs.getString("gewicht", "NA") + "\n" +
-                    prefs.getString("geschlecht", "NA"));
+            txtvi_testSettings.setText(prefs.getString("benutzername", "Hans Muster"));
         } catch (Exception e) {
             Log.wtf("SharedPrefs", e);
         }
@@ -58,9 +56,7 @@ public class Menu extends Activity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Menu.this);
 
         try {
-            txtvi_testSettings.setText(prefs.getString("benutzername", "Hans Muster") + "\n" +
-                    prefs.getString("gewicht", "NA") + "\n" +
-                    prefs.getString("geschlecht", "NA"));
+           txtvi_testSettings.setText(prefs.getString("benutzername", "Hans Muster"));
         } catch (Exception e) {
             Log.wtf("SharedPrefs", e);
         }
@@ -78,8 +74,8 @@ public class Menu extends Activity {
 		//Toast.makeText(getApplicationContext(), "Hier können dann die Einstellungen ausgewählt werden!", Toast.LENGTH_SHORT).show();
 	}
 	
-	public void startHistory (View view) {
-		Intent intent = new Intent(this, Evening.class);
+	public void openHistory (View view) {
+		Intent intent = new Intent(this, History.class);
 	    startActivity(intent);
 	}
 	

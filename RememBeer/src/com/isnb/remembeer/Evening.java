@@ -127,9 +127,9 @@ public class Evening extends Activity {
 	        double volume = getDrinkVolume(tagLastDrink); //Anteil an Alkohol in GetrÃ¤nk als dezimalzahl
 	
 	        if ("0.0".equals(txtvi_currentBloodAlcohol.getText())) {
-	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromille(size, volume)) + "â€°");
+	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromille(size, volume)) + "");
 	        } else {
-	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(size, volume)) + "â€°");
+	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(size, volume)) + "");
 	        }
 
 		}
@@ -237,11 +237,8 @@ public class Evening extends Activity {
 	
 	        if ("0.0".equals(txtvi_currentBloodAlcohol.getText())) {
 	        	
-	        	String vol = calcPromille(size, volume) + "â€°";
-	        	
 	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromille(size, volume)) + "â€°");
 	        } else {
-	        	String vol = calcPromilleZeit(size, volume) + "â€°";
 	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(size, volume)) + "â€°");
 	        }
 
@@ -264,8 +261,31 @@ public class Evening extends Activity {
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
-        imgbtn_currentDrink.setImageResource(0); //Clear Image
-        imgbtn_currentDrink.setTag(5);
+		// aktuelle Zeit
+        DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
+		String currentTime = dateFormat.format(new Date());
+		
+		// wenn kein Tag vorhanden ist wurde noch kein Getränk vorher getrunken, daher ist noch keine berechnung des Promillestandes möglich
+		if(imgbtn_currentDrink.getTag() != null) {
+			int tagLastDrink = (Integer) imgbtn_currentDrink.getTag();
+		
+	        int size = getDrinkSize(tagLastDrink); //Grösse des Getränks in ml
+	        double volume = getDrinkVolume(tagLastDrink); //Anteil an Alkohol in GetrÃ¤nk als dezimalzahl
+	
+	        if ("0.0".equals(txtvi_currentBloodAlcohol.getText())) {
+	        	
+	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromille(size, volume)) + "â€°");
+	        } else {
+	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(size, volume)) + "â€°");
+	        }
+
+		}
+		
+        imgbtn_currentDrink.setImageResource(R.drawable.wineglass);
+        imgbtn_currentDrink.setTag(6);
+        
+        // aktuelle Zeit des ausgewählten Getränks
+        txtvi_currentDrinkTime.setText(currentTime);
         
 	}
 	
@@ -279,8 +299,31 @@ public class Evening extends Activity {
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
+		// aktuelle Zeit
+        DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
+		String currentTime = dateFormat.format(new Date());
+		
+		// wenn kein Tag vorhanden ist wurde noch kein Getränk vorher getrunken, daher ist noch keine berechnung des Promillestandes möglich
+		if(imgbtn_currentDrink.getTag() != null) {
+			int tagLastDrink = (Integer) imgbtn_currentDrink.getTag();
+		
+	        int size = getDrinkSize(tagLastDrink); //Grösse des Getränks in ml
+	        double volume = getDrinkVolume(tagLastDrink); //Anteil an Alkohol in GetrÃ¤nk als dezimalzahl
+	
+	        if ("0.0".equals(txtvi_currentBloodAlcohol.getText())) {
+	        	
+	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromille(size, volume)) + "â€°");
+	        } else {
+	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(size, volume)) + "â€°");
+	        }
+
+		}
+		
         imgbtn_currentDrink.setImageResource(R.drawable.coctail);
-        imgbtn_currentDrink.setTag(6);
+        imgbtn_currentDrink.setTag(7);
+        
+        // aktuelle Zeit des ausgewählten Getränks
+        txtvi_currentDrinkTime.setText(currentTime);
         
 
 	}
@@ -294,8 +337,31 @@ public class Evening extends Activity {
 		TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
 		TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
+		// aktuelle Zeit
+        DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
+		String currentTime = dateFormat.format(new Date());
+		
+		// wenn kein Tag vorhanden ist wurde noch kein Getränk vorher getrunken, daher ist noch keine berechnung des Promillestandes möglich
+		if(imgbtn_currentDrink.getTag() != null) {
+			int tagLastDrink = (Integer) imgbtn_currentDrink.getTag();
+		
+	        int size = getDrinkSize(tagLastDrink); //Grösse des Getränks in ml
+	        double volume = getDrinkVolume(tagLastDrink); //Anteil an Alkohol in GetrÃ¤nk als dezimalzahl
+	
+	        if ("0.0".equals(txtvi_currentBloodAlcohol.getText())) {
+	        	
+	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromille(size, volume)) + "â€°");
+	        } else {
+	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(size, volume)) + "â€°");
+	        }
+
+		}
+		
         imgbtn_currentDrink.setImageResource(R.drawable.coctail);
-        imgbtn_currentDrink.setTag(7);
+        imgbtn_currentDrink.setTag(8);
+        
+        // aktuelle Zeit des ausgewählten Getränks
+        txtvi_currentDrinkTime.setText(currentTime);
 	}
 	
 	/**
@@ -380,7 +446,7 @@ public class Evening extends Activity {
         TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
         DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
 
-        txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(0, 0.0)) + "â€°");
+        txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(0, 0.0)) + "");
         txtvi_currentDrinkTime.setText(dateFormat.format(new Date()));
     }
 	

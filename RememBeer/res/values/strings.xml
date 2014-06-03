@@ -2,12 +2,35 @@
 <resources>
 
     <string name="app_name">RememBeer</string>
+    
     <string name="title_activity_menu">Menu</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_settings">Einstellungen</string>
     <string name="title_activity_evening">Evening</string>
+    <string name="title_activity_settings">Einstellungen</string>
     <string name="title_activity_history">History</string>
     <string name="title_activity_timeline">Timeline</string>
+    
+    <string name="action_settings">Settings</string>
+
+    <string name="contdes_currentDrink">current drink</string>
+    <string name="contdes_drinkOne">drink one</string>
+    <string name="contdes_drinkTwo">drink two</string>
+    <string name="contdes_drinkThree">drink three</string>
+    <string name="contdes_drinkFour">drink four</string>
+    <string name="contdes_drinkFive">drink five</string>
+    <string name="contdes_drinkSix">drink six</string>
+    <string name="contdes_drinkSeven">drink seven</string>
+    <string name="contdes_drinkEight">drink eight</string>
+    <string name="contdes_drinkNine">drink nine</string>
+    <string name="contdes_drinkTen">drink ten</string>
+    <string name="contdes_drinkEleven">drink eleven</string>
+    <string name="contdes_drinkTwelve">drink twelve</string>
+    
+    <string name="text_name">Name</string>
+    <string name="text_currentPromille">Aktueller Promillestand</string>
+    <string name="text_nullPromille">0.0‰</string>
+    <string name="text_time">00:00</string>
+    <string name="text_newCalculate">Neu Berechnen</string>
+    
+    
 
 </resources>

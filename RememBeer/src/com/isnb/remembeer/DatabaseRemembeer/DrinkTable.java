@@ -64,7 +64,7 @@ public class DrinkTable {
     private Drink cursorToDrink(Cursor cursor) {
     	
     	DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
-		String currentTime = dateFormat.format(new Date());
+		//String currentTime = dateFormat.format(new Date());
 		
     	Drink lfLocation = new Drink();
     	

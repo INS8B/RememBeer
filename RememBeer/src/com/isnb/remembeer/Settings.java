@@ -1,9 +1,7 @@
 package com.isnb.remembeer;
 
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import android.view.Window;
 
 /**
  * Created by Tamino on 21.05.2014.
