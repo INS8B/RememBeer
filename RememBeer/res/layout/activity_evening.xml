@@ -10,34 +10,14 @@
     tools:context=".Evening" >
 
     <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <TableRow
-            android:id="@+id/tblrow_currentPromille"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/text_currentPromille"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <TextView
-                android:id="@+id/txtvi_currentBloodAlcohol"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:text="@string/text_nullPromille"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-        </TableRow>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="0,1,2" >
 
         <TableRow
             android:id="@+id/tblrow_currentDrink"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="match_parent" >
 
             <TextView
                 android:id="@+id/txtvi_currentDrinkTime"
@@ -49,23 +29,49 @@
             <ImageButton
                 android:id="@+id/imgbtn_currentDrink"
                 android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:contentDescription="@string/contdes_currentDrink" />
-        </TableRow>
-    </TableLayout>
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:contentDescription="@string/contdes_currentDrink"
+                android:src="@drawable/beer" />
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:stretchColumns="0,1,2" >
+            <TextView
+                android:id="@+id/txtvi_currentBloodAlcohol"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/text_nullPromille"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@color/lightBlue" />
+          
+            <View
+                android:id="@+id/view2"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@color/lightBlue" />
+            
+            <View
+                android:id="@+id/view3"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@color/lightBlue" />
+
+        </TableRow>
 
         <TableRow
             android:id="@+id/tableRow1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="5" >
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
 
             <ImageButton
                 android:id="@+id/imgbtn_drinkOne"
@@ -101,7 +107,9 @@
         <TableRow
             android:id="@+id/tblrow_linesOne"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" >
 
             <View
                 android:id="@+id/vi_lineOne"
@@ -161,7 +169,9 @@
         <TableRow
             android:id="@+id/tblrow_linesTwo"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" >
 
             <View
                 android:id="@+id/vi_lineFour"
@@ -221,7 +231,9 @@
         <TableRow
             android:id="@+id/tblrow_linesThree"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" >
 
             <View
                 android:id="@+id/vi_lineSeven"
@@ -281,7 +293,9 @@
         <TableRow
             android:id="@+id/tblrow_linesFour"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" >
 
             <View
                 android:id="@+id/vi_lineTen"
@@ -302,17 +316,16 @@
                 android:background="@color/lightBlue" />
         </TableRow>
 
-
-        
         <Button
             android:id="@+id/btn_calcPromille"
-            android:layout_width="150dp"
+            android:layout_width="130dp"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:background="@color/lightBlue"
             android:onClick="neuBerechnen"
             android:text="@string/text_newCalculate"
             android:textColor="@color/white" />
+
     </TableLayout>
 
 </RelativeLayout>
