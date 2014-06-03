@@ -254,7 +254,7 @@
                 android:layout_margin="@dimen/drink_margin"
                 android:background="@color/white"
                 android:contentDescription="@string/contdes_drinkTen"
-                android:src="@drawable/coctail"
+                android:src="@drawable/shot"
                 android:onClick="chooseDrinkSeven" />
 
             <ImageButton
@@ -264,7 +264,7 @@
                 android:layout_margin="@dimen/drink_margin"
                 android:background="@color/white"
                 android:contentDescription="@string/contdes_drinkEleven"
-                android:src="@drawable/coctail"
+                android:src="@drawable/shot"
                 android:onClick="chooseDrinkEight" />
 
             <ImageButton
@@ -274,7 +274,7 @@
                 android:layout_margin="@dimen/drink_margin"
                 android:background="@color/white"
                 android:contentDescription="@string/contdes_drinkTwelve"
-                android:src="@drawable/coctail"
+                android:src="@drawable/shot"
                 android:onClick="chooseDrinkNine" />
         </TableRow>
 
