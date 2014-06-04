@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
@@ -53,7 +54,14 @@ public class Evening extends Activity {
         TextView txtvi_currentDrinkTime = (TextView)findViewById(R.id.txtvi_currentDrinkTime);
         TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
-        int img_ID = (Integer) imgbtn_currentDrink.getTag();
+        int img_ID = 0;
+        try {
+            img_ID = (Integer) imgbtn_currentDrink.getTag();
+        } catch (NullPointerException e) {
+            img_ID = 0;
+            Log.wtf("OnDestroy", e + "");
+        }
+
 
         SharedPreferences.Editor prefEditor = getSharedPreferences("Evening", Context.MODE_PRIVATE).edit();
         prefEditor.putString("currentBloodAlcohol", txtvi_currentBloodAlcohol.getText().toString());
