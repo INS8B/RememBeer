@@ -49,17 +49,19 @@ public final class R {
         public static final int custom_drink_buttons=0x7f02000c;
         public static final int custom_start_button=0x7f02000d;
         public static final int ic_launcher=0x7f02000e;
-        public static final int shot=0x7f02000f;
-        public static final int theke=0x7f020010;
-        public static final int uhr=0x7f020011;
-        public static final int wineglass=0x7f020012;
-        public static final int zur_bar=0x7f020013;
+        public static final int kotzen=0x7f02000f;
+        public static final int shot=0x7f020010;
+        public static final int theke=0x7f020011;
+        public static final int uhr=0x7f020012;
+        public static final int wineglass=0x7f020013;
+        public static final int zur_bar=0x7f020014;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b002e;
+        public static final int action_settings=0x7f0b002f;
         public static final int btn_calcPromille=0x7f0b0028;
         public static final int btn_history=0x7f0b002c;
         public static final int btn_settings=0x7f0b002b;
+        public static final int imageView1=0x7f0b002d;
         public static final int imgbtn_currentDrink=0x7f0b0002;
         public static final int imgbtn_drinkEight=0x7f0b001a;
         public static final int imgbtn_drinkEleven=0x7f0b0022;
@@ -74,7 +76,7 @@ public final class R {
         public static final int imgbtn_drinkTwelve=0x7f0b0023;
         public static final int imgbtn_drinkTwo=0x7f0b000a;
         public static final int imgbtn_startDrinking=0x7f0b002a;
-        public static final int summary=0x7f0b002d;
+        public static final int summary=0x7f0b002e;
         public static final int tableRow1=0x7f0b0008;
         public static final int tableRow2=0x7f0b0010;
         public static final int tableRow3=0x7f0b0018;
