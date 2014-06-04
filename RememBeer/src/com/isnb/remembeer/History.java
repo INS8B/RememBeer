@@ -1,7 +1,9 @@
 package com.isnb.remembeer;
 
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.Window;
 
 
 public class History extends Activity {
@@ -9,14 +11,9 @@ public class History extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+        getActionBar().hide();
 		setContentView(R.layout.activity_history);
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(android.view.Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.history, menu);
-		return true;
-	}
-
 }

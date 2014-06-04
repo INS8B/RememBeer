@@ -34,13 +34,15 @@ public class Evening extends Activity {
         TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
 
         if (prefs.contains("currentImgButton")){
-            imgbtn_currentDrink.setImageResource(prefs.getInt("currentImgButton", 0));
+            imgbtn_currentDrink.setTag(prefs.getInt("currentImgButton", 0));
+
         }
-        if (prefs.contains("currentImgButton")){
+        if (prefs.contains("currentDrinkTime")){
             txtvi_currentDrinkTime.setText(prefs.getString("currentDrinkTime", "00:00"));
         }
-        if (prefs.contains("currentImgButton")){
+        if (prefs.contains("currentBloodAlcohol")){
             txtvi_currentBloodAlcohol.setText(prefs.getString("currentBloodAlcohol", "0.0â€°"));
+
         }
     }
 
@@ -74,11 +76,11 @@ public class Evening extends Activity {
         DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
 		String currentTime = dateFormat.format(new Date());
 		
-		// wenn kein Tag vorhanden ist wurde noch kein Getränk vorher getrunken, daher ist noch keine berechnung des Promillestandes möglich
+		// wenn kein Tag vorhanden ist wurde noch kein Getrï¿½nk vorher getrunken, daher ist noch keine berechnung des Promillestandes mï¿½glich
 		if(imgbtn_currentDrink.getTag() != null) {
 			int tagLastDrink = (Integer) imgbtn_currentDrink.getTag();
 		
-	        int size = getDrinkSize(tagLastDrink); //Grösse des Getränks in ml
+	        int size = getDrinkSize(tagLastDrink); //Grï¿½sse des Getrï¿½nks in ml
 	        double volume = getDrinkVolume(tagLastDrink); //Anteil an Alkohol in GetrÃ¤nk als dezimalzahl
 	
 	        if ("0.0".equals(txtvi_currentBloodAlcohol.getText())) {
@@ -89,11 +91,11 @@ public class Evening extends Activity {
 
 		}
 		
-        // neues Bild des Getränks das ausgewählt wurde
+        // neues Bild des Getrï¿½nks das ausgewï¿½hlt wurde
         imgbtn_currentDrink.setImageResource(R.drawable.beerbottle);
         imgbtn_currentDrink.setTag(1);
         
-        // aktuelle Zeit des ausgewählten Getränks
+        // aktuelle Zeit des ausgewï¿½hlten Getrï¿½nks
         txtvi_currentDrinkTime.setText(currentTime);
 	}
 	
@@ -119,31 +121,31 @@ public class Evening extends Activity {
 		//TextView txtvi_testSettings = (TextView) findViewById(R.id.txtvi_testSettings);
 
 
-		// wenn kein Tag vorhanden ist wurde noch kein Getränk vorher getrunken, daher ist noch keine berechnung des Promillestandes möglich
+		// wenn kein Tag vorhanden ist wurde noch kein Getrï¿½nk vorher getrunken, daher ist noch keine berechnung des Promillestandes mï¿½glich
 		if(imgbtn_currentDrink.getTag() != null) {
 			int tagLastDrink = (Integer) imgbtn_currentDrink.getTag();
 		
-	        int size = getDrinkSize(tagLastDrink); //Grösse des Getränks in ml
+	        int size = getDrinkSize(tagLastDrink); //Grï¿½sse des Getrï¿½nks in ml
 	        double volume = getDrinkVolume(tagLastDrink); //Anteil an Alkohol in GetrÃ¤nk als dezimalzahl
 	
 	        if ("0.0".equals(txtvi_currentBloodAlcohol.getText())) {
-	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromille(size, volume)) + "");
+	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromille(size, volume)) + "â€°");
 	        } else {
-	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(size, volume)) + "");
+	        	txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(size, volume)) + "â€°");
 	        }
 
 		}
         
-        // neues Bild das ausgewählt wurde 
+        // neues Bild das ausgewï¿½hlt wurde 
 		imgbtn_currentDrink.setImageResource(R.drawable.beerglass);
         imgbtn_currentDrink.setTag(2);
 		
-        // aktuelle Zeit des ausgewählten Getränks
+        // aktuelle Zeit des ausgewï¿½hlten Getrï¿½nks
         txtvi_currentDrinkTime.setText(currentTime);
     }
 	
 	/**
-	 *  Chübel (0.5 dl mit 0.05 Vol.%)
+	 *  Chï¿½bel (0.5 dl mit 0.05 Vol.%)
 	 *  
 	 * @param view
 	 */
@@ -156,11 +158,11 @@ public class Evening extends Activity {
         DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
 		String currentTime = dateFormat.format(new Date());
 		
-		// wenn kein Tag vorhanden ist wurde noch kein Getränk vorher getrunken, daher ist noch keine berechnung des Promillestandes möglich
+		// wenn kein Tag vorhanden ist wurde noch kein Getrï¿½nk vorher getrunken, daher ist noch keine berechnung des Promillestandes mï¿½glich
 		if(imgbtn_currentDrink.getTag() != null) {
 			int tagLastDrink = (Integer) imgbtn_currentDrink.getTag();
 		
-	        int size = getDrinkSize(tagLastDrink); //Grösse des Getränks in ml
+	        int size = getDrinkSize(tagLastDrink); //Grï¿½sse des Getrï¿½nks in ml
 	        double volume = getDrinkVolume(tagLastDrink); //Anteil an Alkohol in GetrÃ¤nk als dezimalzahl
 	
 	        if ("0.0".equals(txtvi_currentBloodAlcohol.getText())) {
@@ -174,7 +176,7 @@ public class Evening extends Activity {
         imgbtn_currentDrink.setImageResource(R.drawable.beer);
         imgbtn_currentDrink.setTag(R.drawable.beer);
         
-        // aktuelle Zeit des ausgewählten Getränks
+        // aktuelle Zeit des ausgewï¿½hlten Getrï¿½nks
         txtvi_currentDrinkTime.setText(currentTime);
 	}
 	
@@ -192,11 +194,11 @@ public class Evening extends Activity {
         DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
 		String currentTime = dateFormat.format(new Date());
 		
-		// wenn kein Tag vorhanden ist wurde noch kein Getränk vorher getrunken, daher ist noch keine berechnung des Promillestandes möglich
+		// wenn kein Tag vorhanden ist wurde noch kein Getrï¿½nk vorher getrunken, daher ist noch keine berechnung des Promillestandes mï¿½glich
 		if(imgbtn_currentDrink.getTag() != null) {
 			int tagLastDrink = (Integer) imgbtn_currentDrink.getTag();
 		
-	        int size = getDrinkSize(tagLastDrink); //Grösse des Getränks in ml
+	        int size = getDrinkSize(tagLastDrink); //Grï¿½sse des Getrï¿½nks in ml
 	        double volume = getDrinkVolume(tagLastDrink); //Anteil an Alkohol in GetrÃ¤nk als dezimalzahl
 	
 	        if ("0.0".equals(txtvi_currentBloodAlcohol.getText())) {
@@ -210,7 +212,7 @@ public class Evening extends Activity {
         imgbtn_currentDrink.setImageResource(R.drawable.wineglass);
         imgbtn_currentDrink.setTag(3);
         
-        // aktuelle Zeit des ausgewählten Getränks
+        // aktuelle Zeit des ausgewï¿½hlten Getrï¿½nks
         txtvi_currentDrinkTime.setText(currentTime);
 	}
 	
@@ -228,11 +230,11 @@ public class Evening extends Activity {
         DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
 		String currentTime = dateFormat.format(new Date());
 		
-		// wenn kein Tag vorhanden ist wurde noch kein Getränk vorher getrunken, daher ist noch keine berechnung des Promillestandes möglich
+		// wenn kein Tag vorhanden ist wurde noch kein Getrï¿½nk vorher getrunken, daher ist noch keine berechnung des Promillestandes mï¿½glich
 		if(imgbtn_currentDrink.getTag() != null) {
 			int tagLastDrink = (Integer) imgbtn_currentDrink.getTag();
 		
-	        int size = getDrinkSize(tagLastDrink); //Grösse des Getränks in ml
+	        int size = getDrinkSize(tagLastDrink); //Grï¿½sse des Getrï¿½nks in ml
 	        double volume = getDrinkVolume(tagLastDrink); //Anteil an Alkohol in GetrÃ¤nk als dezimalzahl
 	
 	        if ("0.0".equals(txtvi_currentBloodAlcohol.getText())) {
@@ -247,7 +249,7 @@ public class Evening extends Activity {
         imgbtn_currentDrink.setImageResource(R.drawable.wineglass);
         imgbtn_currentDrink.setTag(4);
         
-        // aktuelle Zeit des ausgewählten Getränks
+        // aktuelle Zeit des ausgewï¿½hlten Getrï¿½nks
         txtvi_currentDrinkTime.setText(currentTime);
 	}
 	
@@ -265,11 +267,11 @@ public class Evening extends Activity {
         DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
 		String currentTime = dateFormat.format(new Date());
 		
-		// wenn kein Tag vorhanden ist wurde noch kein Getränk vorher getrunken, daher ist noch keine berechnung des Promillestandes möglich
+		// wenn kein Tag vorhanden ist wurde noch kein Getrï¿½nk vorher getrunken, daher ist noch keine berechnung des Promillestandes mï¿½glich
 		if(imgbtn_currentDrink.getTag() != null) {
 			int tagLastDrink = (Integer) imgbtn_currentDrink.getTag();
 		
-	        int size = getDrinkSize(tagLastDrink); //Grösse des Getränks in ml
+	        int size = getDrinkSize(tagLastDrink); //Grï¿½sse des Getrï¿½nks in ml
 	        double volume = getDrinkVolume(tagLastDrink); //Anteil an Alkohol in GetrÃ¤nk als dezimalzahl
 	
 	        if ("0.0".equals(txtvi_currentBloodAlcohol.getText())) {
@@ -284,7 +286,7 @@ public class Evening extends Activity {
         imgbtn_currentDrink.setImageResource(R.drawable.wineglass);
         imgbtn_currentDrink.setTag(6);
         
-        // aktuelle Zeit des ausgewählten Getränks
+        // aktuelle Zeit des ausgewï¿½hlten Getrï¿½nks
         txtvi_currentDrinkTime.setText(currentTime);
         
 	}
@@ -303,11 +305,11 @@ public class Evening extends Activity {
         DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
 		String currentTime = dateFormat.format(new Date());
 		
-		// wenn kein Tag vorhanden ist wurde noch kein Getränk vorher getrunken, daher ist noch keine berechnung des Promillestandes möglich
+		// wenn kein Tag vorhanden ist wurde noch kein Getrï¿½nk vorher getrunken, daher ist noch keine berechnung des Promillestandes mï¿½glich
 		if(imgbtn_currentDrink.getTag() != null) {
 			int tagLastDrink = (Integer) imgbtn_currentDrink.getTag();
 		
-	        int size = getDrinkSize(tagLastDrink); //Grösse des Getränks in ml
+	        int size = getDrinkSize(tagLastDrink); //Grï¿½sse des Getrï¿½nks in ml
 	        double volume = getDrinkVolume(tagLastDrink); //Anteil an Alkohol in GetrÃ¤nk als dezimalzahl
 	
 	        if ("0.0".equals(txtvi_currentBloodAlcohol.getText())) {
@@ -322,7 +324,7 @@ public class Evening extends Activity {
         imgbtn_currentDrink.setImageResource(R.drawable.coctail);
         imgbtn_currentDrink.setTag(7);
         
-        // aktuelle Zeit des ausgewählten Getränks
+        // aktuelle Zeit des ausgewï¿½hlten Getrï¿½nks
         txtvi_currentDrinkTime.setText(currentTime);
         
 
@@ -341,11 +343,11 @@ public class Evening extends Activity {
         DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
 		String currentTime = dateFormat.format(new Date());
 		
-		// wenn kein Tag vorhanden ist wurde noch kein Getränk vorher getrunken, daher ist noch keine berechnung des Promillestandes möglich
+		// wenn kein Tag vorhanden ist wurde noch kein Getrï¿½nk vorher getrunken, daher ist noch keine berechnung des Promillestandes mï¿½glich
 		if(imgbtn_currentDrink.getTag() != null) {
 			int tagLastDrink = (Integer) imgbtn_currentDrink.getTag();
 		
-	        int size = getDrinkSize(tagLastDrink); //Grösse des Getränks in ml
+	        int size = getDrinkSize(tagLastDrink); //Grï¿½sse des Getrï¿½nks in ml
 	        double volume = getDrinkVolume(tagLastDrink); //Anteil an Alkohol in GetrÃ¤nk als dezimalzahl
 	
 	        if ("0.0".equals(txtvi_currentBloodAlcohol.getText())) {
@@ -360,7 +362,7 @@ public class Evening extends Activity {
         imgbtn_currentDrink.setImageResource(R.drawable.coctail);
         imgbtn_currentDrink.setTag(8);
         
-        // aktuelle Zeit des ausgewählten Getränks
+        // aktuelle Zeit des ausgewï¿½hlten Getrï¿½nks
         txtvi_currentDrinkTime.setText(currentTime);
 	}
 	
@@ -387,21 +389,22 @@ public class Evening extends Activity {
 	 * 
 	 * @param tagLastDrink
 	 * @return
-	 */
+	 * GrÃ¶sse in "cl" angeben
+     */
 	private int getDrinkSize (int tagLastDrink) {
 		
 		int drinkSize = 0;
 
 		if (tagLastDrink == 1) {
-			drinkSize = 330;
+			drinkSize = 33;
 		} else if (tagLastDrink == 2) {
-			drinkSize = 300;
+			drinkSize = 30;
 		} else if (tagLastDrink == 3) {
-			drinkSize = 500;
+			drinkSize = 50;
 		} else if (tagLastDrink == 4) {
-			drinkSize = 200;
+			drinkSize = 20;
 		} else if (tagLastDrink == 5) {
-			drinkSize = 200;
+			drinkSize = 20;
 		} else if (tagLastDrink == 6) {
 			
 		} else if (tagLastDrink == 7) {
@@ -419,15 +422,15 @@ public class Evening extends Activity {
 		double drinkVolume = 0;
 		
 		if (tagLastDrink == 1) {
-			drinkVolume = 0.05;
+			drinkVolume = 5;
 		} else if (tagLastDrink == 2) {
-			drinkVolume = 0.05;
+			drinkVolume = 5;
 		} else if (tagLastDrink == 3) {
-			drinkVolume = 0.05;
+			drinkVolume = 5;
 		} else if (tagLastDrink == 4) {
-			drinkVolume = 0.10;
+			drinkVolume = 10;
 		} else if (tagLastDrink == 5) {
-			drinkVolume = 0.10;
+			drinkVolume = 10;
 		} else if (tagLastDrink == 6) {
 			
 		} else if (tagLastDrink == 7) {
@@ -446,7 +449,7 @@ public class Evening extends Activity {
         TextView txtvi_currentBloodAlcohol = (TextView)findViewById(R.id.txtvi_currentBloodAlcohol);
         DateFormat dateFormat = new SimpleDateFormat("HH:mm dd.MM.yy");
 
-        txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(0, 0.0)) + "");
+        txtvi_currentBloodAlcohol.setText(String.format("%.1f", calcPromilleZeit(0, 0.0)) + "â€°");
         txtvi_currentDrinkTime.setText(dateFormat.format(new Date()));
     }
 	
@@ -461,20 +464,20 @@ public class Evening extends Activity {
         double wasseranteil; //Wasseranteil im KÃ¶rper
         double promille;
 
-        // 300ml (grösse des Getränks) * 0.05 (=5% durchschnittlicher Alkoholgehalt von Bier)
+        // 300ml (grï¿½sse des Getrï¿½nks) * 0.05 (=5% durchschnittlicher Alkoholgehalt von Bier)
         pure_alc = drinkSize * volume;
 
         //Alkohol in GetrÃ¤nk (pure_alc) * spezifisches Gewicht von Alkohol (0.81)
-        alc_gramms = pure_alc * 0.81;
+        alc_gramms = pure_alc * 0.081;
 
         if (sex == 1) { //Falls mÃ¤nnlich
             wasseranteil = gewicht * 0.7;
             promille = alc_gramms / wasseranteil;
-            promille = promille * 3; //Resorptionsdefizit
+            promille = promille * 0.85; //Resorptionsdefizit
         } else if (sex == 2) {//Falls weiblich
             wasseranteil = gewicht * 0.6;
             promille = alc_gramms / wasseranteil;
-            promille = promille * 3; //Resorptionsdefizit
+            promille = promille * 0.85; //Resorptionsdefizit
         } else {
             Toast.makeText(getApplicationContext(), "Bitte in den Einstellungen ein Geschlecht auswÃ¤hlen!", Toast.LENGTH_SHORT).show();
             promille = 0;
