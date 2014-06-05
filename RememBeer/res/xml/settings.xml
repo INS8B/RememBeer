@@ -24,4 +24,11 @@
         android:defaultValue="1"
     />
 
+    <SwitchPreference
+        android:key="selfie"
+        android:title="Selfie nach Drink"
+        android:textOff="Selfie Funktion einschalten?"
+        android:textOn="Selfie Funktion ausschalten?"
+        android:defaultValue="true"
+    />
 </PreferenceScreen>

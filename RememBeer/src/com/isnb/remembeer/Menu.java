@@ -1,17 +1,22 @@
 package com.isnb.remembeer;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.net.URI;
 
 
 public class Menu extends Activity {
@@ -45,6 +50,17 @@ public class Menu extends Activity {
             Log.wtf("SharedPrefs", e);
         }
 
+        SharedPreferences prefSelfieUri = getSharedPreferences("SelfieUri", Context.MODE_PRIVATE);
+        ImageView imgviLatestSelfie = (ImageView) findViewById(R.id.imgvi_lastSelfie);
+        String nameLatestSelfie = getString(R.string.name_latest_selfie);
+        try {
+            if (prefs.getBoolean("selfie", false) && nameLatestSelfie != "default.jpg") {
+                imgviLatestSelfie.setImageURI(Uri.parse(prefSelfieUri.getString("LatestSelfiePath", "default.jpg")));
+            }
+        } catch (Exception e) {
+            Log.wtf("SharedPrefs", e);
+        }
+
 	}
 
     @Override
@@ -57,6 +73,17 @@ public class Menu extends Activity {
 
         try {
            txtvi_testSettings.setText(prefs.getString("benutzername", "Hans Muster"));
+        } catch (Exception e) {
+            Log.wtf("SharedPrefs", e);
+        }
+
+        SharedPreferences prefSelfieUri = getSharedPreferences("SelfieUri", Context.MODE_PRIVATE);
+        ImageView imgviLatestSelfie = (ImageView) findViewById(R.id.imgvi_lastSelfie);
+        String nameLatestSelfie = getString(R.string.name_latest_selfie);
+        try {
+            if (prefs.getBoolean("selfie", false) && nameLatestSelfie != "default.jpg") {
+                imgviLatestSelfie.setImageURI(Uri.parse(prefSelfieUri.getString("LatestSelfiePath", "default.jpg")));
+            }
         } catch (Exception e) {
             Log.wtf("SharedPrefs", e);
         }

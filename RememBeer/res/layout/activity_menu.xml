@@ -11,9 +11,9 @@
     android:focusableInTouchMode="false">
 
     <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:id="@+id/imgvi_lastSelfie"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/kotzen" />
@@ -45,17 +45,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/btn_settings"
-        android:layout_alignTop="@+id/imageView1"
+        android:layout_alignTop="@+id/imgvi_lastSelfie"
         android:text="@string/text_name"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ImageButton
         android:id="@+id/imgbtn_startDrinking"
         android:layout_width="300dp"
         android:layout_height="150dp"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/imageView1"
-        android:layout_marginTop="51dp"
+        android:layout_alignLeft="@+id/imgvi_lastSelfie"
+        android:layout_below="@+id/imgvi_lastSelfie"
+        android:layout_marginTop="20dp"
         android:background="@drawable/zur_bar"
         android:contentDescription="@string/title_activity_evening"
         android:onClick="openEvening" />
